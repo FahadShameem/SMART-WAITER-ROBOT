@@ -1,0 +1,77 @@
+/* Common styles */
+body {
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  text-align: center;
+}
+
+.card {
+  display: inline-block;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 80%; /* Added to limit card width */
+  max-height: 80vh; /* Added to limit card height */
+  overflow: auto; /* Added to enable scrolling if content exceeds card height */
+}
+
+.tick-mark {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.message h1 {
+  margin: 0;
+  font-size: 24px;
+  font-family: Arial, sans-serif;
+  color: #4CAF50;
+  opacity: 0;
+  animation: fade-in 2s ease-in-out forwards;
+}
+
+.tick-mark svg {
+  opacity: 0;
+  animation: tick-in 2s ease-in-out forwards;
+}
+
+
+
+
+/* Keyframes for animations */
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes tick-in {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+  

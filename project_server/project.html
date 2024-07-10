@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Ordering Website</title>
+    <link href="project.css" type="text/css" rel="stylesheet">
+    
+    <script>
+        // JavaScript code to populate the username input field
+        window.onload = function() {
+            // Get the username from the query parameters
+            const urlParams = new URLSearchParams(window.location.search);
+            const tablenumber = urlParams.get('table_no');
+
+            // Update the value of the username input field
+            document.getElementById('tabledata').value = tablenumber;
+        };
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Food Menu</h1>
+    </header>
+    <div class="container">
+        <form class="inner-container" action="/submit" method="post">
+         <div class="tablenumber">
+            <label for="tablenumber">Table Number : </label>
+            <input type="text" id="tabledata" name="tablenumber"readonly>
+         </div>  
+        <div class="food-item">
+            <img src="/images/burger.jpg" alt="Burger">
+            <label for="burger"><h2>Burger</h2></label>
+            <p>Delicious!</p>
+            <p>Price: $149.99</p>
+            
+            <label>Quantity:</label>
+            <input type="number"  name="burger" min="0" value="0">
+            
+        </div>
+        <div class="food-item">
+            <img src="/images/pupps.jpg" alt="pupps">
+            <label for="eggpupps"><h2>egg Pupps</h2></label>
+            <p>Yummy!</p>
+            <p>Price: $20.00</p>
+          
+            <label>Quantity:</label>
+            <input type="number" name="eggpupps" min="0" value="0">
+
+            
+        </div>
+        <div class="food-item">
+            <img src="/images/Pizza.jpeg" alt="Pizza">
+            <label for="pizza"><h2>Pizza</h2></label>
+            <p>Sooper!</p>
+            <p>Price: $159.99</p>
+   
+            <label>Quantity:</label>
+            <input type="number" name="pizza" min="0" value="0">
+
+            
+        </div>
+        <div class="food-item">
+            <img src="/images/7up.jpeg" alt="7up">
+            <label for="7up"><h2>7 up</h2></label>
+            <p>Drink it!</p>
+            <p>Price: $40</p>
+  
+            <label>Quantity:</label>
+            <input type="number" name="7up" min="0" value="0">
+
+            
+        </div>
+        <div class="food-item">
+            <img src="/images/maa.webp" alt="maa">
+            <label for="mango
+            
+            juice"><h2>Mango juice</h2></label>
+            <p>Drink it!</p>
+            <p>Price: $10</p>
+          
+            <label>Quantity:</label>
+            <input type="number"name="Mangojuice" min="0" value="0">
+            
+        </div>
+        <!-- Add more food items as needed -->
+        <input type="submit" value="Place Order">
+        </form>
+    </div>
+</body>
+</html>
